@@ -16,3 +16,9 @@
 .nav-hp.open {
   width: 75%;
 }
+
+@media (min-width: 640px) {
+  .nav-hp.open {
+    width: 50%;
+  }
+}
