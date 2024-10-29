@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.nav-hp {
+  width: 0;
+  height: 100%;
+  background-color: #1e293b;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  transition: width 0.5s ease;
+}
+
+.nav-hp.open {
+  width: 75%;
+}
