@@ -9,6 +9,7 @@
       src="https://kit.fontawesome.com/2577b25eea.js"
       crossorigin="anonymous"
     ></script>
+    <link rel="stylesheet" href="node_modules/leaflet/dist/leaflet.css" />
   </head>
   <body>
     <div class="flex flex-wrap">
@@ -252,11 +253,52 @@
             </p>
           </div>
           <!-- kategori data end -->
+
+          <!-- leafletjs start -->
+          <div class="bg-white rounded-lg shadow-lg p-4">
+            <!-- Div untuk peta dengan aspect ratio 16:9 -->
+            <div class="relative w-full" style="padding-top: 56.25%">
+              <div
+                id="map"
+                class="absolute top-0 left-0 w-full h-full rounded-lg"
+              ></div>
+            </div>
+
+            <!-- Kontrol peta -->
+            <div class="mt-4 flex flex-wrap gap-2">
+              <button
+                id="zoomIn"
+                class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded"
+              >
+                Zoom In
+              </button>
+              <button
+                id="zoomOut"
+                class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded"
+              >
+                Zoom Out
+              </button>
+              <button
+                id="centerMap"
+                class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded"
+              >
+                Center Map
+              </button>
+            </div>
+
+            <!-- Info koordinat -->
+            <div class="mt-4 p-4 bg-gray-50 rounded-lg">
+              <p id="coordinates" class="text-gray-700">Koordinat: -</p>
+            </div>
+          </div>
+          <!-- leafletjs end -->
         </div>
       </main>
       <!-- content end -->
     </div>
 
     <script src="script.js"></script>
+    <script src="node_modules/leaflet/dist/leaflet.js"></script>
+    <script src="peta.js"></script>
   </body>
 </html>
