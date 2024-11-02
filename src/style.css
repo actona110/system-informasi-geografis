@@ -590,6 +590,10 @@ video {
   top: 0px;
 }
 
+.z-\[9999\] {
+  z-index: 9999;
+}
+
 .mb-2 {
   margin-bottom: 0.5rem;
 }
