@@ -1,5 +1,8 @@
-// Inisialisasi peta
-const map = L.map("map").setView([-6.2, 106.816666], 13);
+// Koordinat Banyuwangi
+const banyuwangiCoords = [-8.2191, 114.3691];
+
+// Inisialisasi peta dengan lokasi Banyuwangi
+const map = L.map("map").setView(banyuwangiCoords, 12);
 
 // Tambahkan layer peta
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
@@ -7,8 +10,10 @@ L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
     '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
 }).addTo(map);
 
-// Tambahkan marker default
-const marker = L.marker([-6.2, 106.816666]).bindPopup("Jakarta").addTo(map);
+// Tambahkan marker default di pusat Banyuwangi
+const marker = L.marker(banyuwangiCoords)
+  .bindPopup("Kota Banyuwangi")
+  .addTo(map);
 
 // Event handler untuk tombol kontrol
 document.getElementById("zoomIn").addEventListener("click", () => {
@@ -20,7 +25,7 @@ document.getElementById("zoomOut").addEventListener("click", () => {
 });
 
 document.getElementById("centerMap").addEventListener("click", () => {
-  map.setView([-6.2, 106.816666], 13);
+  map.setView(banyuwangiCoords, 12);
 });
 
 // Update koordinat saat mengklik peta
